@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    #site-header {
+        border-top-width: 32px;
+        @apply border-primary-400
+    }
+    
+    .list-tick li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    .list-tick p {
+        width: 80%;
+    }
+    .list-tick li:before {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 33px;
+        background-image: url('./../images/tick.png');
+        margin-right: 16px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .list-tick {
+            column-count: 2;
+            column-gap: 16px;
+        }
+      }
+  }
